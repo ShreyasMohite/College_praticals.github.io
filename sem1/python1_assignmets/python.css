@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.back {
+    background-color: black;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 100px;
+    color: rgba(138, 9, 9, 0.87);
+}
+
+.assignments {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    font-size: 23px;
+    margin: 40px 0px;
+    color: rgb(255, 253, 253);
+}
+
+li:hover {
+    color: rgb(40, 173, 40);
+}
