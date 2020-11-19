@@ -21,7 +21,6 @@
 }
 
 .card:hover {
-    background-color: rgba(14, 205, 230, 0.589);
     transition: 3s;
     color: black;
 }
