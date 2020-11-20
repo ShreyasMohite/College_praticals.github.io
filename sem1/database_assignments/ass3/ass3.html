@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ass3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css" integrity="sha512-zzq8ZrbhP7DGbwClbqSYuo+di3FvAlMNykCKWE6pHuqmCgGjJSISDTzy7QkdI2ajLlgw0nx6hxIu8os2hYuN8w==" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Assignment 3</h1>
+    </div>
+    <!-- section A-->
+    <div class="container">
+        <div class="steps">
+            <h5>(A)Without using primary key (Without Constraints) </h5>
+            <h4>Step 1 : <span>Create A database</span></h4>
+            <code>
+                create database [database name];
+                <p class="eg">For Example</p>
+                create database kmc;
+            </code>
+
+            <p class="eg">OR</p>
+            <p>Use the database which is already available by using this command</p>
+            <code>
+                show databases;
+            </code>
+            <p class="eg">To use Available database type this command</p>
+            <code>
+                use databasename;
+                <p class="eg">
+                    like
+                </p>
+                use kmc;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 2 : <span>Create table in database</span> </h4>
+            <code>
+                create table employee(eno int,ename varchar(20),city varchar(20),salary varchar(20));
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 3 : <span>To insert values into database</span> </h4>
+            <code>
+                insert into employee values(103,"shreyas","khopoli","100000");
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 4 : <span>To see All employee records</span> </h4>
+            <code>
+                select * from employee;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 5 : <span>Select the city of employees</span> </h4>
+            <code>
+                select city from employee;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 6 : <span>Select perticular employee using where clause</span> </h4>
+            <code>
+                select * from employee where eno=103;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 7 : <span>To update particular employee</span> </h4>
+            <code>
+                update employee set salary=200000 where eno=103;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 8 : <span>To delete particular employee</span> </h4>
+            <code>
+                delete from employee where eno=103;
+            </code>
+
+        </div>
+    </div>
+
+    <!--Section B-->
+    <div class="container">
+        <div class="steps new">
+            <h5>(B) With using Primary Key (With Constraints)</h5>
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 1 : <span>Creating table using primary key</span> </h4>
+            <code>
+                create table department(dno int primary key,dname varchar(20));
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 2 : <span>Creating table using foreign key</span> </h4>
+            <code>
+                create table employees(eno int primary key,ename varchar(20),city varchar(20),dno int,FOREIGN KEY(dno)REFERENCES dept(dno));
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 3 : <span>Inserting value in department table</span> </h4>
+            <code>
+                insert into department values(1,'IT');
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 4 : <span>Viewing all records from departments</span> </h4>
+            <code>
+                select * from department;
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 5 : <span>Inserting value in employees table</span> </h4>
+            <code>
+                insert into employess values(101,'shreyas','khopoli',1);
+            </code>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h4>Step 6 : <span>Viewing  all records from employees</span> </h4>
+            <code>
+                select * from employess;
+            </code>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
